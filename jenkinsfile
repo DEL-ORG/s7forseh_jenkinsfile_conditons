@@ -6,11 +6,8 @@ pipeline {
         choice(choices: ['DEV', 'QA', 'SECURITY', 'DEVOPS', 'PRE_PROD', 'PROD'], description: 'Select an environment', name: 'ENVIRONMENT')
 	string(defaultValue: 'canary', description: 'Enter the application name', name: 'APP')
     
-    parameters {
         choice choices: ['ECR', 'DOCKERHUB', 'NEXUS'], description: 'select an a registry where you want to push your image ', name: 'REGISTRY'
      }
-
-    }
 
     stages {
 
