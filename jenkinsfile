@@ -25,6 +25,12 @@ pipeline {
 
 
         stage('test') {
+	    when {
+	        expression {
+		    envi.REGISTRY == 'NEXUS'
+		}
+	    }
+
 	    steps {
 	        echo 'Hello World'
 	    }
