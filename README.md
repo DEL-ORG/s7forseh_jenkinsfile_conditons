@@ -1,0 +1,1 @@
+# s7forseh_jenkinsfile_conditons
