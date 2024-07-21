@@ -12,6 +12,11 @@ pipeline {
     stages {
 
         stage('build') {
+	    when {
+	        expression {
+		env.APP == 'Odilia'
+		}
+	    }
 	    steps {
 	        echo 'Hello World'
 					                
