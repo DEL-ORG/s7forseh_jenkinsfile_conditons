@@ -27,7 +27,7 @@ pipeline {
         stage('test') {
 	    when {
 	        expression {
-		    envi.REGISTRY == 'NEXUS'
+	        envi.REGISTRY == 'NEXUS'
 		}
 	    }
 
