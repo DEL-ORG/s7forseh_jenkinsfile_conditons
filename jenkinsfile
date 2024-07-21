@@ -1,6 +1,12 @@
 pipeline {
 
     agent any
+    
+    parameters {
+        choice(choices: ['DEV', 'QA', 'SECURITY', 'DEVOPS', 'PRE_PROD', 'PROD'], description: 'Select an environment', name: 'ENVIRONMENT')
+	string(defaultValue: 'canary', description: 'Enter the application name', name: 'APP')
+    
+    }
 
     stages {
 
